@@ -29,20 +29,20 @@ h1 {
 }
 
 input {
-  background:#e5fffc;
+  background:#cefff9;
   width: 100%;
   box-sizing: border-box;
   height: 50px;
   font-size: 20px;
   font-weight: 0.5px;
-  padding-left: 25px;
+  padding-left: 20px;
   border:none;
   border: 1px solid gray;
   color: gray;
 }
 
 input:focus {
-  background: #ccfff9;
+  background: #9afff3;
   border: 1px solid #07818c;
   outline: none;
   color:black;
@@ -73,7 +73,7 @@ button:hover {
   text-align: center;
   justify-content: center;
   position: absolute;
-  bottom:35px;
+  bottom:30px;
   right:0;
 }
 
@@ -85,6 +85,7 @@ button:hover {
   background: white;
   position: relative;
   padding: 10px;
+  background-color: #e6fcfa;
 }
 
 .tasks {
@@ -99,15 +100,32 @@ button:hover {
   line-height: 23px;
   cursor: pointer;
   font-size: 20px;
-  margin-bottom:5px;
+  margin-bottom:8px;
   font-style: italic;
   position: relative;
   padding: 3px 10px;
+  padding-left: 20px;
   user-select: none;
   border-bottom: 1px solid rgba(7, 129, 140, 0.4);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.tasks li:before{
+  display: inline-block;
+  content:'';
+  background-color: red;
+  position: absolute;
+  top:0;
+  left:0;
+  width:5px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.tasks li.done:before{
+  background-color: springgreen;
 }
 
 span.todo-trash {
@@ -119,8 +137,7 @@ span.todo-trash {
 
 .checked {
   color: gray;
-  text-decoration: line-through;
-  background-color:#ebebed;
+  background-color:rgba(97, 255, 195, 0.2);
 }
 
 .fa-trash-alt {
