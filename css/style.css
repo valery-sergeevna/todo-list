@@ -1,0 +1,146 @@
+html {
+  min-height: 100%;
+}
+*{
+  box-sizing: border-box;
+  margin:0;
+}
+
+body {
+  height: 100%;
+  background: #91eae4;
+  background-image: linear-gradient(to bottom, rgb(19, 240, 214), rgb(22, 231, 214), rgb(25, 223, 213), rgb(28, 214, 213), rgb(31, 206, 212), rgb(34, 197, 212), rgb(41, 203, 215), rgb(47, 208, 218), rgb(54, 214, 221), rgb(61, 219, 224), rgb(67, 225, 227), rgb(74, 230, 230));
+}
+.todo-list__intro{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  background-color: #07818c;
+  color: white;
+  padding: 10px;
+}
+i.pen{
+  font-size: 30px;
+}
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: bold;
+}
+
+input {
+  background:#e5fffc;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 0.5px;
+  padding-left: 25px;
+  border:none;
+  border: 1px solid gray;
+  color: gray;
+}
+
+input:focus {
+  background: #ccfff9;
+  border: 1px solid #07818c;
+  outline: none;
+  color:black;
+}
+button {
+  background-color: #07818c;
+  border: 2px solid #07818c;
+  color: white;
+  padding: 8px 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 0 10px;
+  min-width: 95px;
+}
+
+button:hover {
+  background-color: #ccfff9;
+  color: black;
+  border: 2px solid #07818c;
+}
+
+#btn-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  bottom:35px;
+  right:0;
+}
+
+#todo-list {
+  margin: 0 auto;
+  box-shadow: 0 0 1em black;
+  max-width: 345px;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  padding: 10px;
+}
+
+.tasks {
+  list-style-type: none;
+  margin: 15px 0;
+  padding:0;
+  width:100%;
+  overflow: hidden;
+}
+
+.tasks li {
+  line-height: 23px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom:5px;
+  font-style: italic;
+  position: relative;
+  padding: 3px 10px;
+  user-select: none;
+  border-bottom: 1px solid rgba(7, 129, 140, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.todo-trash {
+  text-align: center;
+  font-size: 20px; 
+  transition: 0.3s linear;
+  padding-left:10px;
+}
+
+.checked {
+  color: gray;
+  text-decoration: line-through;
+  background-color:#ebebed;
+}
+
+.fa-trash-alt {
+  color: #07818c;
+}
+
+/*  if screen size less than 450px, resize tips lists and close btn so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+      font-size: 20px
+  }
+
+  .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+  }
+
+  #todo {
+      width: 100%;
+      height: 100%;
+  }
+}
