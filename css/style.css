@@ -10,6 +10,7 @@ body {
   height: 100%;
   background: #91eae4;
   background-image: linear-gradient(to bottom, rgb(19, 240, 214), rgb(22, 231, 214), rgb(25, 223, 213), rgb(28, 214, 213), rgb(31, 206, 212), rgb(34, 197, 212), rgb(41, 203, 215), rgb(47, 208, 218), rgb(54, 214, 221), rgb(61, 219, 224), rgb(67, 225, 227), rgb(74, 230, 230));
+  font-family: 'Kufam', cursive;
 }
 .todo-list__intro{
   display: flex;
@@ -19,22 +20,21 @@ body {
   color: white;
   padding: 10px;
 }
-i.pen{
-  font-size: 30px;
-}
 h1 {
   text-transform: uppercase;
   margin: 0;
   font-weight: bold;
+  font-size: 30px;
 }
 
 input {
   background:#cefff9;
   width: 100%;
   box-sizing: border-box;
-  height: 50px;
-  font-size: 20px;
+  height: 45px;
+  font-size: 18px;
   font-weight: 0.5px;
+  font-family: inherit;
   padding-left: 20px;
   border:none;
   border: 1px solid gray;
@@ -99,7 +99,7 @@ button:hover {
 .tasks li {
   line-height: 23px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom:8px;
   font-style: italic;
   position: relative;
@@ -143,21 +143,33 @@ span.todo-trash {
 .fa-trash-alt {
   color: #07818c;
 }
-
-/*  if screen size less than 450px, resize tips lists and close btn so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {
-      font-size: 20px
-  }
-
-  .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-  }
-
-  #todo {
-      width: 100%;
-      height: 100%;
-  }
+.status{
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+  width:63%;
+}
+.status span{
+  display: inline-block;
+  font-size: 17px;
+}
+#done,
+#all, 
+#not-done{
+  font-weight: bold;
+  display: inline-block;
+  background-color:#5df3e9;
+  width:18px;
+  height:18px;
+  border-radius: 50%;
+  text-align: center;
+}
+#all{
+  color:black;
+}
+#done{
+  color:rgb(0, 143, 71);
+}
+#not-done{
+  color:red;
 }
