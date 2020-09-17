@@ -5,6 +5,9 @@ Minimal TODO list web app on native JS:
 + Allows people to update a list and save it.
 + Mobile friendly.
 
-
 View demo: https://valery-sergeevna.github.io/todo-list/
+
+![](images/screen.png)
+
+
 
